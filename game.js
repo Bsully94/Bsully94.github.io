@@ -97,7 +97,9 @@ choices.forEach(choice => {
         
         acceptingAnswers = false;
         const selectedChoice = e.target;
-        const slectedAnswer = selectedChoice.dataset["number"];
+        console.log(selectedChoice);
+        const slectedAnswer = selectedChoice.dataset["number"]; 
+
 
         const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect"; 
 
@@ -110,7 +112,6 @@ choices.forEach(choice => {
 
 
 
-        getNewQuestion();
 
     });
 });
