@@ -4,7 +4,7 @@ const choices = Array.from(document.getElementsByClassName("choice-text"));
 
 
 let currentQuestion = {};
-let acceptingAnswers = true;
+let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
@@ -54,7 +54,7 @@ let questions = [
 ];
 
 const CORRECT_BONUS = 10;
-const MAX_QUESTIONS= 5;
+const MAX_QUESTIONS = 5;
 
 startGame = () => {
     questionCounter = 0;
@@ -91,7 +91,7 @@ getNewQuestion = () => {
 };
 
 choices.forEach(choice => {
-    choice.addEventListener("click", e => {
+    choice.addEventListener("click", e => { 
         
         if(!acceptingAnswers) return;
         
@@ -110,7 +110,7 @@ choices.forEach(choice => {
 
 
 
-        getNewQuestion();s
+        getNewQuestion();
 
     });
 });
