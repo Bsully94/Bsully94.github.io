@@ -80,7 +80,7 @@ getNewQuestion = () => {
 
 
     choices.forEach(choice => {
-    const number = choice.dataset["number"];
+    const number = choice.dataset["data-number"];
     choice.innerText = currentQuestion["choice" + number];
     });
 
@@ -98,7 +98,7 @@ choices.forEach(choice => {
         acceptingAnswers = false;
         const selectedChoice = e.target;
         console.log(selectedChoice);
-        const slectedAnswer = selectedChoice.dataset["number"]; 
+        const slectedAnswer = selectedChoice.dataset["data-number"]; 
 
 
         const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect"; 
@@ -112,6 +112,7 @@ choices.forEach(choice => {
 
 
 
+        getNewQuestion();
 
     });
 });
