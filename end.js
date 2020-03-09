@@ -7,3 +7,15 @@ const finalScore = document.getElementById("finalScore");
 
 finalScore.innerText = mostRecentScore;
 
+username.addEventListener("keyup", () => {
+
+    saveScoreButton.disabled = !username.value;
+    });
+    
+    
+    
+    
+    saveHighScore = e => {
+        console.log("clicked save");
+        e.preventDefault();
+    };
